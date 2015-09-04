@@ -1,3 +1,4 @@
+//Parses The Input To Return Item Object
 public class Parser {
     String input;
 
@@ -24,5 +25,17 @@ public class Parser {
         String[] inputDetails = tokenise();
         int index = inputDetails.length - 1;
         return Double.parseDouble(inputDetails[index]);
+    }
+
+    public boolean isExemptedItem(String itemName) {
+        if(itemName.contains("book") || itemName.contains("hocolate") || itemName.contains("ill"))
+            return true;
+        return false;
+    }
+
+    public boolean isImportedItem() {
+        if(input.contains("mported"))
+            return true;
+        return false;
     }
 }
