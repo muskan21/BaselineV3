@@ -27,4 +27,13 @@ public class BaselineAppTest {
 
         assertEquals(12.49, itemPrice, 0.01);
     }
+
+    @SuppressWarnings("deprecation")
+    @Test
+    public void tokeniseInputShouldReturnTheArrayOfStringTokens() {
+        BaselineApp baselineApp = new BaselineApp();
+        String[] inputTokens = baselineApp.tokenise("1 book at 12.49");
+
+        assertEquals(new String[]{"1", "book", "at", "12.49"}, inputTokens);
+    }
 }

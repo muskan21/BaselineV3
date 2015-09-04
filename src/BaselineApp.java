@@ -31,4 +31,8 @@ public class BaselineApp {
         int index = inputDetails.length - 1;
         return Double.parseDouble(inputDetails[index]);
     }
+
+    public String[] tokenise(String input) {
+        return input.split(" ");
+    }
 }
