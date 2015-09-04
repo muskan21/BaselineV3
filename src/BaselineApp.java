@@ -37,8 +37,8 @@ public class BaselineApp {
     }
 
     public boolean isExemptedItem(String itemName) {
-        if(itemName.contains("usic") || itemName.contains("erfume"))
-            return false;
-        return true;
+        if(itemName.contains("book") || itemName.contains("hocolate") || itemName.contains("ill"))
+            return true;
+        return false;
     }
 }
