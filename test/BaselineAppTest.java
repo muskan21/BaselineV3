@@ -62,4 +62,20 @@ public class BaselineAppTest {
 
         assertFalse(isExempted);
     }
+
+    @Test
+    public void isExemptedShouldReturnTrueForHealthItems() {
+        BaselineApp baselineApp = new BaselineApp();
+        boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 headache pill at 2.49"));
+
+        assertTrue(isExempted);
+    }
+
+    @Test
+    public void isExemptedShouldReturnFalseForPerfume() {
+        BaselineApp baselineApp = new BaselineApp();
+        boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 bottle of perfume at 12.49"));
+
+        assertFalse(isExempted);
+    }
 }
