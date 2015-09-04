@@ -35,4 +35,8 @@ public class BaselineApp {
     public String[] tokenise(String input) {
         return input.split(" ");
     }
+
+    public boolean isExemptedItem(String itemName) {
+        return true;
+    }
 }

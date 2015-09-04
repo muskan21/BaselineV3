@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BaselineAppTest {
 
@@ -35,5 +36,13 @@ public class BaselineAppTest {
         String[] inputTokens = baselineApp.tokenise("1 book at 12.49");
 
         assertEquals(new String[]{"1", "book", "at", "12.49"}, inputTokens);
+    }
+
+    @Test
+    public void isExemptedShouldReturnTrueForBook() {
+        BaselineApp baselineApp = new BaselineApp();
+        boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 book at 12.49"));
+
+        assertTrue(isExempted);
     }
 }
