@@ -37,6 +37,8 @@ public class BaselineApp {
     }
 
     public boolean isExemptedItem(String itemName) {
+        if(itemName.contains("Music"))
+            return false;
         return true;
     }
 }

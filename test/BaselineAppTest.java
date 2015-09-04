@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class BaselineAppTest {
@@ -44,5 +45,21 @@ public class BaselineAppTest {
         boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 book at 12.49"));
 
         assertTrue(isExempted);
+    }
+
+    @Test
+    public void isExemptedShouldReturnTrueForChocolate() {
+        BaselineApp baselineApp = new BaselineApp();
+        boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 chocolate bar at 42.49"));
+
+        assertTrue(isExempted);
+    }
+
+    @Test
+    public void isExemptedShouldReturnFalseForMusic() {
+        BaselineApp baselineApp = new BaselineApp();
+        boolean isExempted = baselineApp.isExemptedItem(baselineApp.extractItem("1 Music CD at 12.49"));
+
+        assertFalse(isExempted);
     }
 }
