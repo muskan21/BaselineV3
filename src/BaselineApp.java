@@ -17,6 +17,12 @@ public class BaselineApp {
     }
 
     public String extractItem(String input) {
-        return "book";
+        String[] inputDetails = input.split(" ");
+        int i;
+        String name = "";
+        for(i = 1; i < inputDetails.length-2; i++) {
+            name = name+inputDetails[i]+" ";
+        }
+        return name;
     }
 }
