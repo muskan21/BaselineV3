@@ -1,3 +1,6 @@
+package com.twu.baseline;
+
+import com.twu.baseline.Parser;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,5 +1,5 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+package com.twu.baseline;
+
 import java.util.Scanner;
 
 public class BaselineApp {
