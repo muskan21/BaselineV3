@@ -17,7 +17,7 @@ public class BaselineApp {
     }
 
     public String extractItem(String input) {
-        String[] inputDetails = input.split(" ");
+        String[] inputDetails = tokenise(input);
         int i;
         String name = "";
         for(i = 1; i < inputDetails.length-2; i++) {
@@ -27,7 +27,7 @@ public class BaselineApp {
     }
 
     public double extractPrice(String input) {
-        String[] inputDetails = input.split(" ");
+        String[] inputDetails = tokenise(input);
         int index = inputDetails.length - 1;
         return Double.parseDouble(inputDetails[index]);
     }
