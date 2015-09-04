@@ -19,4 +19,12 @@ public class BaselineAppTest {
 
         assertEquals("imported box of chocolates ", itemName);
     }
+
+    @Test
+    public void extractPriceShouldReturnThePriceOfTheInputItem() {
+        BaselineApp baselineApp = new BaselineApp();
+        double itemPrice = baselineApp.extractPrice("1 book at 12.49");
+
+        assertEquals(12.49, itemPrice, 0.01);
+    }
 }

@@ -25,4 +25,10 @@ public class BaselineApp {
         }
         return name;
     }
+
+    public double extractPrice(String input) {
+        String[] inputDetails = input.split(" ");
+        int index = inputDetails.length - 1;
+        return Double.parseDouble(inputDetails[index]);
+    }
 }
